@@ -12,7 +12,8 @@ status-website:
   cname: status.proconcordia.com
   # baseUrl: proconcordia.github.io/upptime
   logoUrl: https://app.proconcordia.com/logo.png
-  name: ""
+  favicon: https://app.proconcordia.com/icon.png
+  name: ProConcordia
   # introTitle: "ProConcordia. Legislative Intelligence For Everyone."
   # introMessage:
   # navbar:
@@ -31,6 +32,11 @@ status-website:
     /* ProConcordia status theme. Overrides Upptime's own :root theme vars,
        mirrored per prefers-color-scheme so nothing leaks between modes.
        :root:root beats the theme files' :root regardless of inject order. */
+       
+    /* Logo stands alone: hide the text name beside it, keep the image. */
+    a.logo > div { display: none; }
+
+    footer { display: none; }
     @media (prefers-color-scheme: light) {
       :root:root {
         --body-background-color: oklch(0.9773 0.0102 81.8);          /* cream-100 */
