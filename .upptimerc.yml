@@ -20,6 +20,72 @@ status-website:
   #     href: /
   #   - title: GitHub
   #     href: https://github.com/$OWNER/$REPO
+  links:
+    - rel: preconnect
+      href: https://fonts.googleapis.com
+    - rel: preconnect
+      href: https://fonts.gstatic.com
+    - rel: stylesheet
+      href: https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap
+  css: |
+    /* ProConcordia status theme. Overrides Upptime's own :root theme vars,
+       mirrored per prefers-color-scheme so nothing leaks between modes.
+       :root:root beats the theme files' :root regardless of inject order. */
+    @media (prefers-color-scheme: light) {
+      :root:root {
+        --body-background-color: oklch(0.9773 0.0102 81.8);          /* cream-100 */
+        --body-text-color: #241f2e;                                  /* text-primary */
+        --card-background-color: #ffffff;                            /* surface-raised */
+        --card-border-color: oklch(0.9156 0.0195 80.11);             /* border */
+        --nav-background-color: #ffffff;
+        --nav-border-bottom-color: oklch(0.9156 0.0195 80.11);
+        --nav-current-border-bottom-color: oklch(0.4013 0.1411 306.78); /* plum-600 accent */
+        --up-border-left-color: oklch(0.5292 0.1031 156.22);         /* success-500 */
+        --tag-up-background-color: oklch(0.5292 0.1031 156.22);
+        --down-border-left-color: oklch(0.5387 0.1779 27.41);        /* error-500 */
+        --tag-down-background-color: oklch(0.5387 0.1779 27.41);
+        --down-background-color: oklch(0.9527 0.0174 17.46);         /* error-50 tint */
+        --degraded-border-left-color: oklch(0.6448 0.1431 63.21);    /* warning-500 */
+        --change-background-color: oklch(0.6448 0.1431 63.21);
+        --tag-degraded-background-color: oklch(0.4732 0.1247 46.2);  /* warning-700 so white reads */
+        --tag-color: #ffffff;
+        --submit-button-background-color: oklch(0.2875 0.1194 310.69); /* plum-800 */
+        --submit-button-border-color: oklch(0.2272 0.0909 309.92);     /* plum-900 */
+        --submit-button-color: oklch(0.9773 0.0102 81.8);
+        --error-button-background-color: oklch(0.2875 0.1194 310.69);
+        --error-button-border-color: oklch(0.2272 0.0909 309.92);
+        --error-button-color: oklch(0.9773 0.0102 81.8);
+      }
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:root {
+        --body-background-color: #17111f;                            /* surface-base */
+        --body-text-color: #f3eef8;                                  /* text-primary */
+        --card-background-color: #211a2c;                            /* surface-raised */
+        --card-border-color: #372c47;                                /* border */
+        --nav-background-color: #211a2c;
+        --nav-border-bottom-color: #372c47;
+        --nav-current-border-bottom-color: #c9a9e8;                  /* brand accent (dark) */
+        --up-border-left-color: #74c48c;                             /* status-success (dark) */
+        --tag-up-background-color: #74c48c;
+        --down-border-left-color: #e88a84;                           /* status-error (dark) */
+        --tag-down-background-color: #e88a84;
+        --down-background-color: #3a1b20;
+        --degraded-border-left-color: #e2a85c;                       /* status-warning (dark) */
+        --change-background-color: #e2a85c;
+        --tag-degraded-background-color: #e2a85c;
+        --tag-color: #17111f;                                        /* dark text on the bright tags */
+        --submit-button-background-color: #c9a9e8;                   /* brand-fill (dark) */
+        --submit-button-border-color: #b78fd8;                       /* brand-hover (dark) */
+        --submit-button-color: #2a0a3d;                              /* text-on-fill (dark) */
+        --error-button-background-color: #c9a9e8;
+        --error-button-border-color: #b78fd8;
+        --error-button-color: #2a0a3d;
+      }
+    }
+    /* Brand type: IBM Plex Sans for body, Playfair Display for the page title. */
+    body { font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    h1 { font-family: "Playfair Display", Georgia, serif; }
 
 # Upptime also supports notifications, assigning issues, and more
 # See https://upptime.js.org/docs/configuration
