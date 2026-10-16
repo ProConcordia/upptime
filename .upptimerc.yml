@@ -12,8 +12,8 @@ status-website:
   cname: status.proconcordia.com
   # baseUrl: proconcordia.github.io/upptime
   logoUrl: https://app.proconcordia.com/logo.png
-  name: ProConcordia
-  introTitle: "ProConcordia. Legislative Intelligence For Everyone."
+  # name: ProConcordia
+  # introTitle: "ProConcordia. Legislative Intelligence For Everyone."
   # introMessage:
   # navbar:
   #   - title: Status
@@ -81,6 +81,10 @@ status-website:
         --error-button-background-color: #c9a9e8;
         --error-button-border-color: #b78fd8;
         --error-button-color: #2a0a3d;
+      }
+      /* Dark nav is dark, so swap the dark-ink logo for the reverse (light-on-dark) one. */
+      img[src$="/logo.png"] {
+        content: url("https://app.proconcordia.com/logo-reverse.png");
       }
     }
     /* Brand type: IBM Plex Sans for body, Playfair Display for the page title. */
