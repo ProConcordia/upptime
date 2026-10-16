@@ -12,7 +12,7 @@ status-website:
   cname: status.proconcordia.com
   # baseUrl: proconcordia.github.io/upptime
   logoUrl: https://app.proconcordia.com/logo.png
-  # name: ProConcordia
+  name:
   # introTitle: "ProConcordia. Legislative Intelligence For Everyone."
   # introMessage:
   # navbar:
